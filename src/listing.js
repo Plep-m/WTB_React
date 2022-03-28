@@ -20,7 +20,15 @@ class Listing extends Component {
     
     componentDidMount() {
         console.log("componentDidMount")
-        fetch(this.url+'Biscuits')
+
+
+
+    }
+
+    handleChange(event) {    this.setState({text: event.target.value});  }
+    handleSubmit(event) {
+        console.log("handleSubmit with :" + this.state.text)
+        fetch(this.url+this.state.text)
         .then(response => response.json())
         .then(records => {
             this.setState({
@@ -29,19 +37,9 @@ class Listing extends Component {
         })
         .catch(error => console.log(error))
 
-
+        event.preventDefault();
     }
-    handleChange(event) {
-        this.setState({text: event.target.value});
-      }
-    
-      handleSubmit(event) {
-          this.handleChange(event)
-          event.preventDefault();
-        
-        
-      }
-
+  
     renderListing() {
         let recordList = []
         this.state.records.map(record => {
@@ -58,7 +56,7 @@ class Listing extends Component {
                 
                 
                 <div class="store"></div>
-                <a class="button">{record.Store}</a>
+                <a class="button">📍 {record.Store}</a>
                 
               </div>
             </div> 
@@ -77,7 +75,7 @@ class Listing extends Component {
             <form onSubmit={this.handleSubmit}>
             
         
-            <input type="text" defaultValue={this.state.text}/>
+            <input type="text" value={this.state.text} onChange={this.handleChange}/>
             
             <input type="submit" value="Envoyer" />
             </form>   
