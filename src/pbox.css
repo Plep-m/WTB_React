@@ -2,6 +2,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 
+.logo {
+  width: 30%;
+  height: auto;
+}
+
+
 img {
     width: 300px;
     height: 300px;
@@ -13,7 +19,7 @@ img {
 }
 
 body {
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/blurred_bg2.jpg') no-repeat center center fixed;
+  background: url('https://d1fmx1rbmqrxrr.cloudfront.net/zdnet/optim/i/edit/ne/2019/02/Commerce%20en%20ligne%20620__w1200.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -91,3 +97,56 @@ ul {
 background: #60CF6F;
  
 }
+
+/*===== All Button Style =====*/
+.main-btn {
+  position: absolute;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  margin: left 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #fc6500;
+  padding: 0 30px;
+  font-size: 16px;
+  height: 35px;
+  line-height: 31px;
+  width: 125px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  background-color: #fc6500; };
+  
+  /*===== HEADER HERO =====*/
+.header-hero {
+  height: 800px;
+  position: relative; }
+.header-hero-content .header-singup {
+  position: relative;
+  margin-top: 20px;
+  z-index: 9; }
+
+  .header-hero-content .header-singup input {
+    width: 300px;
+    height: 35px;
+    font-size: 24px;
+    border: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 0 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05); }

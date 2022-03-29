@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 
-
+import Logo from './wtb_logo.png'
 
 
 class Listing extends Component {
@@ -20,7 +20,6 @@ class Listing extends Component {
     
     componentDidMount() {
         console.log("componentDidMount")
-
 
 
     }
@@ -70,14 +69,17 @@ class Listing extends Component {
         
         return (
             
-            <div>
-                <h1>Where 2 buy</h1>
+            <div class="header-hero-content">
+                <img class="logo"src={Logo} alt="Logo"/>
             <form onSubmit={this.handleSubmit}>
             
-        
-            <input type="text" value={this.state.text} onChange={this.handleChange}/>
             
-            <input type="submit" value="Envoyer" />
+        
+            <div class="header-singup wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.8s">
+                <input type="text" value={this.state.text} onChange={this.handleChange} placeholder="Oeufs frais bio"/>
+                <button type="submit"class ="main-btn">Envoyer</button>
+            </div>
+            
             </form>   
                 
             <ul>
